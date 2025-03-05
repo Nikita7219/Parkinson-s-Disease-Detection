@@ -18,7 +18,7 @@ app = Flask(__name__, template_folder="template", static_url_path='/static', sta
 
 app.secret_key=os.urandom(24)
 
-conn=mysql.connector.connect(host="127.0.0.1", port=3307, user="nikita", password="Nikita@7219", database="nikita")
+conn=mysql.connector.connect(host="localhost", port=port_number, user="user_name", password="*****", database="database_name")
 cursor=conn.cursor()
 
 Model = load_model(r"static\models\parkinsons_detection_ensemble.h5")
