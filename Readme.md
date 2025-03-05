@@ -9,6 +9,14 @@ Parkinson's disease (PD) is a progressive neurodegenerative disorder affecting m
 Check out the working demo on **YouTube**:  
 📺 [Watch the Demo](https://youtu.be/pP9AxfuGayM)
 
+## **📥 Download Trained Model**  
+
+To use the pre-trained model, download the `.h5` and `.keras` files from the link below:  
+
+📂 **[Download Model Files](https://drive.google.com/drive/folders/16E8SJtag6H4gpxvjVn5FQsWT00-ZhpWa?usp=sharing)**  
+
+After downloading, place the files inside the `models` directory in the project.
+
 ## **📂 Dataset Details**
 
 In the proposed system, the dataset is gathered from the **Parkinson’s Progression Markers Initiative (PPMI)**. We specifically use a dataset containing **31,436 MRI scans** in the **DICOM format**.
