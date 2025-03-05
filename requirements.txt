@@ -1,0 +1,9 @@
+Flask
+tensorflow
+numpy
+opencv-python
+mysql-connector-python
+gdown
+pillow
+werkzeug
+json
