@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="text-center mb-5 mt-5 row justify-content-center" >
+    <h1><b>Prediction of Parkinson's Disease</b></h1>
+    <p class="lead col-9 mt-2" >Early Parkinson's detection using deep learning for subtle symptoms. The focus is on detecting Parkinson's disease in its early stages when symptoms are subtle
+      and difficult to identify through conventional clinical assessment.</p>
+</div>
+<hr class="mb-5 mt-5" >
+
+<!-- Three Feature Blocks -->
+<!-- Three Feature Blocks -->
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-4">
+        <div class="card mb-4 mt-5 shadow" style="background-color:rgba(183, 225, 228, 0.7);">
+            <div class="card-body">
+                <h2 class="card-title">Improved treatment efficacy</h2>
+                <p class="card-text">Early prediction of Parkinson's disease leads to more effective treatment, improving patients' quality of life.</p>
+                <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/parkinsons-disease/6-medication-free-ways-to-feel-better-with-parkinsons-disease" class="btn btn-success">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card mb-4 mt-5 shadow">
+            <div class="card-body" style="background-color:rgb(183, 225, 228, 0.7);">
+                <h2 class="card-title">Earlier initiation of treatment</h2>
+                <p class="card-text"> Early intervention in PD can slow the progression of the disease and improve the
+                    quality of life for patients.</p>
+                <a href="https://www.parkinsonssocietyindia.com/diagnosis/" class="btn btn-success">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card mb-4 mt-5 shadow">
+            <div class="card-body" style="background-color:rgb(183, 225, 228, 0.7);">
+                <h2 class="card-title">Reduced Healthcare Costs</h2>
+                <p class="card-text">Early detection can significantly reduce the overall cost and burden of managing the disease, leading to improved patient outcomes.</p>
+                <a href="https://www.wolterskluwer.com/en/know/healthcare-challenges/reducing-healthcare-costs" class="btn btn-success">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="mt-5 mb-5">
+
+
+<!-- File Upload Form -->
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-between">
+        <!-- First Column - Left -->
+        <div class="col-lg-5 p-4 bg-light m-2 mt-5">
+            <h2 class="display-5"><b>INSTRUCTIONS</b></h2>
+            <hr class="my-4">
+            <ul>
+                <li class="mb-4">Please upload a high-quality MRI image of the brain for analysis</li>
+                <li class="mb-4">The results will be displayed once the analysis is complete</li>
+                <li class="mb-4">The analysis may take a few moments. Please be patient</li>
+                <li class="mb-4">Ensure the image is clear and shows the entire brain</li>
+                <li class="mb-4">Accepted formats: JPG</li>
+            </ul>
+        </div>
+        
+
+        <!-- Second Column - Right -->
+        <div class="col-lg-6 m-2 mt-5 mb-5 d-flex align-items-center justify-content-center m-1 shadow" >
+            <div class="text-center">
+                <h2 class="display-5">Upload a Brain MRI</h2>
+                <p class="mb-4">Upload a high-quality brain MRI image for analysis.</p>
+                <form class="form-inline mt-5 border p-3 px-3 shadow" action="/uploader" method="post" enctype="multipart/form-data">
+                    <div class="input-group mt-2 mb-2">
+                        <input type="file" id="file1" name="file1" accept=".jpg" class="form-control-file custom-file-input" aria-describedby="file-upload-btn" required>
+                        
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-success" id="file-upload-btn">Predict</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+                     
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block body %}
+
+<div class="container mt-5 height-auto" >
+    <!-- Title and Text on Top -->
+    <div class="text-center">
+        <h4 class="fs-1"><b> Result</b></h4>
+        <p>Here is the predicted text generated using our deep learning model.</p>
+    </div>
+
+    <!-- Predicted Text with Description -->
+    <div class="row mt-5 mb-5" >
+        <div class="col-md-6 mt-5 mb-5">
+            
+            <div class="text-center mt-5">
+                <img src="{{ url_for('static', filename=result.image) }}" alt="Predicted Image" class="img-fluid w-auto h-200">
+            </div>
+        </div>
+        {% if result.isPredicted %}
+            <div class="col-md-6 mt-5 mb-5 justify-content-center">
+                <h2 class="mt-5 mb-2">Predicted Result</h2>
+                <p class="mb-5">{{result.predict.prediction}}</p>
+                <hr>
+                <h3 class="mt-5 mb-2">Description</h3>
+                <p class="mb-5">{{result.predict.description}}</p>
+            </div>
+        {% else %}
+            <div class="col-md-6 mt-5 mb-5 justify-content-center">
+                <h2 class="mt-5 mb-2">Predicted Result</h2>
+                <p class="mb-5">{{result.error}}</p>
+                <hr>
+                <!-- <h3 class="mt-5 mb-2">Description</h3> -->
+                <!-- <p class="mb-5">{{result.description}}</p> -->
+            </div>
+        {% endif %}
+    </div>
+
+    <!-- Link to View Images -->
+    <div class="text-center mt-5 mb-5">
+        <a href="/index" class="btn btn-success">Predict Another MRI</a>
+    </div>
+</div>
+{% endblock %}

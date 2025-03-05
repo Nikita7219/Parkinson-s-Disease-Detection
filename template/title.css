@@ -1,0 +1,12 @@
+.body{
+  background: url('{{ url_for("static", filename="img/one.jpg" ) }}') no-repeat center center fixed;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.bullet {
+  list-style-image: url('C:\Users\NIKITA\OneDrive\Desktop\web new\static\img\Yubo.png');
+}
